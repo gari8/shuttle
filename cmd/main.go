@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"shuttle"
+	"github.com/gari8/shuttle"
 )
 
 const (
@@ -13,7 +13,6 @@ Content-Type: application/octet-stream
 package main
 
 import (
-        "github.com/gari8/sprinter"
         "tests/internal/tests/infrastructure/database/conf"
         "tests/internal/tests/infrastructure/server"
 )
@@ -38,6 +37,6 @@ nice to meet you !
 
 func main()  {
 	sh := shuttle.New(multipartText, boundary)
-	fmt.Printf("========%+v\n", sh.Launch("description"))
-	fmt.Printf("========%+v\n", sh.Launch("file"))
+	fmt.Printf("========%+v========\n", sh.Launch("description"))
+	fmt.Printf("========%+v========\n", sh.Launch("file"))
 }
